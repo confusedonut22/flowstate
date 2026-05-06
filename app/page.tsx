@@ -42,6 +42,7 @@ export default function HomePage() {
         <ModeCard href="/learn" icon="📖" title="Learning Objectives" description={`${LESSONS.length} lessons with objectives and full explanations for each topic.`} cta="Study objectives →" />
         <ModeCard href="/math" icon="🧮" title="Math Breakdowns" description={`${MATH_PROBLEMS.length} step-by-step calculations with NEC references and exam tips.`} cta="Work the math →" />
         <ModeCard href="/mnemonics" icon="🧠" title="Mnemonics" description={`Memory tricks for all ${MNEMONICS.length} flashcard answers — hooks, rhymes, and patterns.`} cta="Memorize it →" />
+        <ModeCard href="/wordbank" icon="🔤" title="Word Bank" description={`${questions.length} fill-in-the-blank questions, 10 at a time. Drag words into the blanks.`} cta="Play word bank →" />
         <ModeCard href="/flashcards" icon="🃏" title="Flashcards" description={`Flip through all ${questions.length} cards. Tap to reveal the answer. Filter by topic.`} cta="Start studying →" />
         <ModeCard href="/quiz" icon="📝" title="Multiple Choice Quiz" description={`${multipleChoiceCount} questions with answer choices. Track your score and review mistakes.`} cta="Take the quiz →" />
       </div>
