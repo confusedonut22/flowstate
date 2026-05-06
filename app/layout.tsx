@@ -20,25 +20,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/" className="font-bold text-indigo-700 text-lg tracking-tight">
               JATC Quiz
             </Link>
-            <nav className="flex gap-1">
-              <Link
-                href="/learn"
-                className="px-4 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors"
-              >
-                Learn
-              </Link>
-              <Link
-                href="/flashcards"
-                className="px-4 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors"
-              >
-                Flashcards
-              </Link>
-              <Link
-                href="/quiz"
-                className="px-4 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors"
-              >
-                Quiz
-              </Link>
+            <nav className="flex gap-1 flex-wrap">
+              <Link href="/learn" className="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Learn</Link>
+              <Link href="/math" className="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Math</Link>
+              <Link href="/mnemonics" className="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Mnemonics</Link>
+              <Link href="/flashcards" className="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Flashcards</Link>
+              <Link href="/quiz" className="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-slate-100 transition-colors">Quiz</Link>
             </nav>
           </div>
         </header>

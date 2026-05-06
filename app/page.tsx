@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { questions, TOPICS } from "@/lib/questions";
 import { LESSONS } from "@/lib/objectives";
+import { MATH_PROBLEMS } from "@/lib/math";
+import { MNEMONICS } from "@/lib/mnemonics";
 
 const TOPIC_ICONS: Record<string, string> = {
   "Motor Starting": "⚡",
@@ -36,60 +38,12 @@ export default function HomePage() {
       </div>
 
       {/* Mode cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        <Link href="/flashcards" className="group">
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 flex flex-col gap-4 hover:border-indigo-400 hover:shadow-md transition-all">
-            <div className="text-4xl">🃏</div>
-            <div>
-              <h2 className="text-xl font-bold text-slate-800 mb-1 group-hover:text-indigo-700 transition-colors">
-                Flashcards
-              </h2>
-              <p className="text-sm text-slate-500">
-                Flip through all {questions.length} cards. Tap to reveal the
-                answer. Filter by topic.
-              </p>
-            </div>
-            <span className="text-indigo-600 text-sm font-medium group-hover:underline">
-              Start studying →
-            </span>
-          </div>
-        </Link>
-
-        <Link href="/quiz" className="group">
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 flex flex-col gap-4 hover:border-indigo-400 hover:shadow-md transition-all">
-            <div className="text-4xl">📝</div>
-            <div>
-              <h2 className="text-xl font-bold text-slate-800 mb-1 group-hover:text-indigo-700 transition-colors">
-                Multiple Choice Quiz
-              </h2>
-              <p className="text-sm text-slate-500">
-                {multipleChoiceCount} questions with answer choices. Track your
-                score and review mistakes.
-              </p>
-            </div>
-            <span className="text-indigo-600 text-sm font-medium group-hover:underline">
-              Take the quiz →
-            </span>
-          </div>
-        </Link>
-
-        <Link href="/learn" className="group">
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 flex flex-col gap-4 hover:border-indigo-400 hover:shadow-md transition-all">
-            <div className="text-4xl">📖</div>
-            <div>
-              <h2 className="text-xl font-bold text-slate-800 mb-1 group-hover:text-indigo-700 transition-colors">
-                Learning Objectives
-              </h2>
-              <p className="text-sm text-slate-500">
-                {LESSONS.length} lessons with objectives and full explanations
-                for each topic.
-              </p>
-            </div>
-            <span className="text-indigo-600 text-sm font-medium group-hover:underline">
-              Study objectives →
-            </span>
-          </div>
-        </Link>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <ModeCard href="/learn" icon="📖" title="Learning Objectives" description={`${LESSONS.length} lessons with objectives and full explanations for each topic.`} cta="Study objectives →" />
+        <ModeCard href="/math" icon="🧮" title="Math Breakdowns" description={`${MATH_PROBLEMS.length} step-by-step calculations with NEC references and exam tips.`} cta="Work the math →" />
+        <ModeCard href="/mnemonics" icon="🧠" title="Mnemonics" description={`Memory tricks for all ${MNEMONICS.length} flashcard answers — hooks, rhymes, and patterns.`} cta="Memorize it →" />
+        <ModeCard href="/flashcards" icon="🃏" title="Flashcards" description={`Flip through all ${questions.length} cards. Tap to reveal the answer. Filter by topic.`} cta="Start studying →" />
+        <ModeCard href="/quiz" icon="📝" title="Multiple Choice Quiz" description={`${multipleChoiceCount} questions with answer choices. Track your score and review mistakes.`} cta="Take the quiz →" />
       </div>
 
       {/* Topic overview */}
@@ -122,5 +76,20 @@ export default function HomePage() {
         JATC Local Union 26 · Washington, D.C. · Book 4 Sessions 7 &amp; 8a
       </p>
     </div>
+  );
+}
+
+function ModeCard({ href, icon, title, description, cta }: { href: string; icon: string; title: string; description: string; cta: string }) {
+  return (
+    <Link href={href} className="group">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 flex flex-col gap-3 hover:border-indigo-400 hover:shadow-md transition-all h-full">
+        <div className="text-3xl">{icon}</div>
+        <div>
+          <h2 className="text-lg font-bold text-slate-800 mb-1 group-hover:text-indigo-700 transition-colors">{title}</h2>
+          <p className="text-sm text-slate-500">{description}</p>
+        </div>
+        <span className="text-indigo-600 text-sm font-medium group-hover:underline mt-auto">{cta}</span>
+      </div>
+    </Link>
   );
 }
