@@ -469,6 +469,7 @@ export const questions: Question[] = [
     topic: "Motor Overload Protection",
     question:
       "Minimum overload protection (starting current NOT a problem) for a 40 hp, 208 V, 3-phase squirrel-cage motor — nameplate FLC 82 A, SF 1.15.",
+    choices: ["75 A", "84.5 A", "94.3 A", "102.5 A"],
     answer: "84.5 A",
   },
   {
@@ -476,6 +477,7 @@ export const questions: Question[] = [
     topic: "Motor Overload Protection",
     question:
       "Maximum overload protection (starting current IS a problem) for a 25 hp, 240 V, 3-phase motor — 63 A, SF 1.05.",
+    choices: ["72.45 A", "78.75 A", "81.9 A", "140 A"],
     answer: "140 A",
   },
   {
@@ -483,6 +485,7 @@ export const questions: Question[] = [
     topic: "Motor Overload Protection",
     question:
       "Maximum overload protection for a 5 hp, 240 V, single-phase motor — SF 1.15, nameplate FLC 31.5 A.",
+    choices: ["31.5 A", "36.225 A", "39.375 A", "40.95 A"],
     answer: "39.375 A",
   },
 
@@ -492,6 +495,7 @@ export const questions: Question[] = [
     topic: "Motor Disconnect Sizing",
     question:
       "Minimum current rating of the motor disconnecting means for a 7.5 hp, 230 V, single-phase motor.",
+    choices: ["40 A", "44 A", "46 A", "50 A"],
     answer: "46 A",
   },
   {
@@ -499,6 +503,7 @@ export const questions: Question[] = [
     topic: "Motor Disconnect Sizing",
     question:
       "Minimum hp motor circuit switch rating for a 30 hp, 460 V, 3-phase Design B motor (Code Letter G) using the maximum locked-rotor rating.",
+    choices: ["25 hp", "30 hp", "40 hp", "50 hp"],
     answer: "40 hp",
   },
 
@@ -508,6 +513,7 @@ export const questions: Question[] = [
     topic: "Motor Branch Circuits",
     question:
       "Minimum ampacity and copper THW conductor size for a 3-phase, 100 hp, 460 V squirrel-cage induction motor.",
+    choices: ["124 A / 1/0 AWG", "155 A / 1/0 AWG", "155 A / 2/0 AWG", "175 A / 3/0 AWG"],
     answer: "155 A / 2/0 AWG",
   },
 
@@ -517,6 +523,7 @@ export const questions: Question[] = [
     topic: "Photoelectric & Proximity Sensors",
     question:
       "A photoelectric sensor output setting that triggers when the receiver receives sufficient light from the light source is called ______.",
+    choices: ["beam operate", "dark operate", "direct operate", "light operate"],
     answer: "light operate",
   },
   {
@@ -524,6 +531,7 @@ export const questions: Question[] = [
     topic: "Photoelectric & Proximity Sensors",
     question:
       "A photoelectric sensor output that changes state when light levels on the receiver drop is called ______.",
+    choices: ["beam interrupt", "dark operate", "light operate", "proximity mode"],
     answer: "dark operate",
   },
   {
@@ -531,6 +539,7 @@ export const questions: Question[] = [
     topic: "Photoelectric & Proximity Sensors",
     question:
       "Which is NOT one of the four parameters commonly used to describe photoelectric device operation?",
+    choices: ["output type", "response", "sensing mode", "sensing range"],
     answer: "response",
   },
   {
@@ -538,6 +547,7 @@ export const questions: Question[] = [
     topic: "Photoelectric & Proximity Sensors",
     question:
       "Which photoelectric scanning method is more reliable for long-range sensing?",
+    choices: ["diffuse scan", "direct scan", "proximity scan", "retroreflective scan"],
     answer: "direct scan",
   },
   {
@@ -545,6 +555,7 @@ export const questions: Question[] = [
     topic: "Photoelectric & Proximity Sensors",
     question:
       "Which photoelectric scanning method should NOT be used when the product surface is shiny or reflective?",
+    choices: ["diffuse scan", "direct scan", "retroreflective scan", "ultrasonic scan"],
     answer: "retroreflective scan",
   },
   {
@@ -552,6 +563,7 @@ export const questions: Question[] = [
     topic: "Photoelectric & Proximity Sensors",
     question:
       "Proximity sensors are solid-state devices that can be capacitive, inductive, or ______.",
+    choices: ["magnetic", "optical", "thermal", "ultrasonic"],
     answer: "ultrasonic",
   },
   {
@@ -559,6 +571,7 @@ export const questions: Question[] = [
     topic: "Photoelectric & Proximity Sensors",
     question:
       "Which method is most commonly used to provide electrical isolation between the input and output sections of a solid-state relay?",
+    choices: ["capacitive coupling", "galvanic separation", "magnetic isolation", "optical coupling"],
     answer: "optical coupling",
   },
 
@@ -568,6 +581,12 @@ export const questions: Question[] = [
     topic: "Class II Hazardous Locations",
     question:
       "Each luminaire in a Class II, Division 1 location shall be ______ and clearly marked for the maximum lamp wattage.",
+    choices: [
+      "dusttight and hermetically sealed",
+      "explosion-proof rated",
+      "identified for the location and clearly marked",
+      "listed for Class II use only",
+    ],
     answer: "identified for the location and clearly marked",
   },
   {
@@ -575,6 +594,7 @@ export const questions: Question[] = [
     topic: "Class II Hazardous Locations",
     question:
       "In Class II, Division 2 locations, motor-generator maximum full-load external temperature shall comply with ______ for normal operation in free air.",
+    choices: ["500.8(B)(1)", "500.8(C)(2)", "502.6(A)", "502.10(A)(1)"],
     answer: "500.8(C)(2)",
   },
   {
@@ -582,12 +602,19 @@ export const questions: Question[] = [
     topic: "Class II Hazardous Locations",
     question:
       "Boxes and fittings in Class II, Division 1 locations shall have threaded bosses for conduit/cable terminations and shall be ______.",
+    choices: ["dusttight", "explosion-proof", "hermetically sealed", "weatherproof"],
     answer: "dusttight",
   },
   {
     id: 60,
     topic: "Class II Hazardous Locations",
     question: "Which wiring method is NOT permitted in Class II, Division 1 locations?",
+    choices: [
+      "intermediate metal conduit",
+      "MI cable",
+      "non-metallic sheathed cable",
+      "rigid metal conduit",
+    ],
     answer: "non-metallic sheathed cable",
   },
 
@@ -597,6 +624,7 @@ export const questions: Question[] = [
     topic: "Class I Hazardous Locations",
     question:
       "Type PLTC or PLTC-ER cable used for Class 2 and Class 3 circuits including cable tray systems are permitted in ______ locations.",
+    choices: ["Class I, Division 1", "Class I, Division 2", "Class II, Division 2", "Class III, Division 1"],
     answer: "Class I, Division 2",
   },
   {
@@ -604,6 +632,12 @@ export const questions: Question[] = [
     topic: "Class I Hazardous Locations",
     question:
       "A sealing fitting in conduit runs leaving a Class I, Division 2 location shall be permitted to be installed ______.",
+    choices: [
+      "on either side of the boundary within 10 ft",
+      "on the safe side only within 10 ft",
+      "within 18 inches of the enclosure on either side",
+      "within 18 inches on the hazardous side only",
+    ],
     answer: "on either side of the boundary within 10 ft",
   },
 
@@ -613,6 +647,7 @@ export const questions: Question[] = [
     topic: "Class III & Intrinsically Safe Systems",
     question:
       "Type PVC, RTRC, and HDPE conduit encased in concrete shall have a minimum envelope thickness of ______ and ≥24 in. of cover.",
+    choices: ["1 inch", "2 inches", "3 inches", "4 inches"],
     answer: "2 inches",
   },
   {
@@ -620,12 +655,19 @@ export const questions: Question[] = [
     topic: "Class III & Intrinsically Safe Systems",
     question:
       "In Class III locations, ______ shall be of the grounding type, designed to minimize accumulation/entry of fibers, and shall prevent escape of sparks or molten particles.",
+    choices: [
+      "luminaires and fixtures",
+      "motors and generators",
+      "receptacles and attachment plugs",
+      "switches and circuit breakers",
+    ],
     answer: "receptacles and attachment plugs",
   },
   {
     id: 65,
     topic: "ESD & General",
     question: "An electrostatic discharge (ESD) event is the rapid flow of electrons between two bodies of ______.",
+    choices: ["equal potential", "opposite polarity", "static resistance", "unequal charge"],
     answer: "unequal charge",
   },
 ];
@@ -635,7 +677,8 @@ export function getQuestionsByTopic(topic: string): Question[] {
 }
 
 export function getMultipleChoiceQuestions(): Question[] {
-  return questions.filter((q) => q.choices && q.choices.length > 0);
+  // All 65 questions now have choices
+  return questions;
 }
 
 export function getFlashcardQuestions(): Question[] {
