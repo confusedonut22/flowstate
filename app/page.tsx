@@ -19,6 +19,12 @@ const TOPIC_ICONS: Record<string, string> = {
   "Class III & Intrinsically Safe Systems": "🔒",
   "Photoelectric & Proximity Sensors": "👁️",
   "ESD & General": "⚠️",
+  "Lighting Sources & Lighting Systems": "💡",
+  "Programmable Logic Controllers": "🖥️",
+  "Grounding & Bonding for Communications": "📡",
+  "Understanding Analog Signals": "📊",
+  "Special Occupancies & Conditions": "🏗️",
+  "Grounding at Separate Buildings": "🏠",
 };
 
 export default function HomePage() {
